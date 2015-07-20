@@ -1,0 +1,30 @@
+ [root@centos64 webshell-detect]# ./chinese_words_scan_v0.11.py -p /var/www/html
+ + [Chinese / 1 ]  /home/script/webshell-detect/china_words.py
+line: 24 #初始化变量++++++++++++++++++++++++++++++++++++++++++++++++++++
+line: 26 #该程序依据path参数标志出当前所在目录，此变量不需修改
+line: 27 #例如: http://www.test.com/webllehs.py?path=.
+line: 30 #SELF_NAME的指必须与该程序的文件名相同
+line: 33 #初始化变量++++++++++++++++++++++++++++++++++++++++++++++++++++
+line: 50             print '路径错误。'
+line: 56         print '<tr align="Left"><th>资源</th><th>最后修改时间</th><th>大小</th><th>模式</th><th>操作</th></tr>'
+line: 60                       %('<a href="?path='+path+'/'+i+'" title="进入该目录">' + i + '</a>', self.lastModified(i), self.resourceMode(i), \
+line: 61                         '<a href="?path='+path+'&delfold='+path+'/'+i+'" title="删除该目录">Del</a>/<a href="javascript:rename(\'' + path + '/' + i + '\',\''+path+'\');" title="重命名该目录">Rename</a>')
+line: 66                         '<a href="?path='+path+'&readfile='+path+'/'+i+'" title="读取该文件内容">R</a>/<a href="javascript:copyFile(\'' + i + '\',\''+path+'\');" title="复制该文件">C</a>/<a href="" title="下载该文件">D</a>/\
+line: 67                         <a href="?path='+path+'&delfile='+path+'/'+i+'" title="删除该文件">Del</a>/<a href="javascript:rename(\'' + path + '/' + i + '\',\''+path+'\');" title="重命名该文件">Rename</a>')
+line: 106             return '目录（' + __fold + '）删除成功。'
+line: 108             return '目录（' + __fold + '）删除失败。'
+line: 117             return '文件（' + __file + '）删除成功。'
+line: 119             return '文件（' + __file + '）删除失败。'
+line: 131             return __resource1 + '重命名为' + __resource2 + '成功。'
+line: 133             return __resource1 + '重命名为' + __resource2 + '失败。'
+line: 143             return __resource1 + '复制到' + __resource2 + '成功。'
+line: 145             return __resource1 + '复制到' + __resource2 + '失败。'
+ + [Chinese / 0 ]  /home/script/webshell-detect/my_scan/zzt.txt
+line: 88 		'(Client/Login\.xml\?Command=Login&Sync=1227081437828)|(因为serv-u的userid变化我搞不懂)':'5',
+line: 89 		'aspmuma|(免杀去后门版\s*by\s*UnKnown)':'5',
+line: 90 		'芝麻开门|F4ck|1c1f81a8b0a630f530f52fa9aa9dda1b|法客论坛|F4ckTeam':'5',
+line: 91 		'silicname|silicpass|命令行执行':'5',
+line: 93 		'MSSQL语句执行工具':'4',
+line: 99 		'mssql导库|闪电小子|\_tysan|MYSQL Manager':'mssql database export',
+line: 105 	'没有权限执行该操作':'5',
+line: 113 	'俺的门门':'5',
