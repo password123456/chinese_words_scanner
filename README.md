@@ -7,7 +7,6 @@ Overview:
 Expects:
  - I hope this helps when an incident response
 
-Usage:
 
 ```sh
 usage: chinese_words_scan_release_final.py [-h] [-p] scan_path
