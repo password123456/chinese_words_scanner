@@ -1,0 +1,23 @@
+[root@centos64 webshell-detect]# ./chinese_words_scan_v0.11.py -p /var/www/html
+ + [Chinese / 0 ]  /var/www/html/11.txt
+ + [Chinese / 0 ]  /var/www/html/22.old
+ + [Chinese / 0 ]  /var/www/html/11.tmp
+ + [Chinese / 76 ]  /var/www/html/JspWebshell 1.2.jsp
+ + [Chinese / 0 ]  /var/www/html/33.php
+ + [Chinese / 0 ]  /var/www/html/33333333333.tmp
+ + [Chinese / 0 ]  /var/www/html/b374k_rs.c
+ + [Chinese / 0 ]  /var/www/html/helloworld.php
+ + [Chinese / 0 ]  /etc/passwd
+ + [Chinese / 0 ]  /var/www/html/123
+ + [Chinese / 0 ]  /var/www/html/index.html_bak
+ + [Chinese / 0 ]  /var/www/html/index.html_ori
+ + [Chinese / 0 ]  /var/www/html/11.png
+ + [Chinese / 0 ]  /var/www/html/health_check.html
+ + [Chinese / 0 ]  /var/www/html/cmd.php
+ + [Chinese / 0 ]  /var/www/html/1.php
+ + [Chinese / 0 ]  /var/www/html/333.old
+ + [Chinese / 0 ]  /var/www/html/charles-proxy-ssl-proxying-certificate.crt
+ + [Chinese / 0 ]  /var/www/html/mitmproxy-ca-cert.pem
+ + [Chinese / 0 ]  /var/www/html/000052.tmp
+ + [Chinese / 0 ]  /var/www/html/444.txt
+ + [Chinese / 0 ]  /var/www/html/white.php
