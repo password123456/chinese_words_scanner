@@ -7,10 +7,8 @@
  created by password123456
 """
 
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-import os,sys
+import os
+import sys
 import codecs
 import argparse
 import re
@@ -28,6 +26,9 @@ def do_scan_chinese(filename):
             bCHINESE_DETECT = 'true'
             iCHINESE_WORDS_COUNTER += 1
             #print "line:",n,line
+        else:
+            pass
+
     f.close()
 
     if bCHINESE_DETECT.lower() in ['true']:
@@ -53,23 +54,23 @@ def scan_file(path):
                 continue
 
 def main():
-  opt=argparse.ArgumentParser(description="::::: Chinese Words Scanner :::::")
-  opt.add_argument("scan_path", help="ex) /chinese_textable_path")
-  opt.add_argument("-p", "--path", action="store_true", dest="path", help="ex) python chinese_words_scan_v0.1.py -p /chinese_textable_path")
+    opt=argparse.ArgumentParser(description="::::: Chinese Words Scanner :::::")
+    opt.add_argument("scan_path", help="ex) /chinese_textable_path")
+    opt.add_argument("-p", "--path", action="store_true", dest="path", help="ex) python chinese_words_scan_v0.1.py -p /chinese_textable_path")
 
-  if len(sys.argv)<=2:
-    opt.print_help()
-    sys.exit(1)
+    if len(sys.argv)<=2:
+        opt.print_help()
+        sys.exit(1)
+    else:
+        options= opt.parse_args()
 
-  options= opt.parse_args()
+    if options.path:
+        path = (options.scan_path)
+        scan_file(path)
 
-  if options.path:
-      path = (options.scan_path)
-      scan_file(path)
-
-  else:
-      opt.print_help()
-      sys.exit()
+    else:
+        opt.print_help()
+        sys.exit()
 
 if __name__ == '__main__':
     main()
