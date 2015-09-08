@@ -7,31 +7,33 @@
  created by password123456
 """
 
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os,sys
 import codecs
 import argparse
 import re
 
-
 def do_scan_chinese(filename):
     f = codecs.open(filename, 'r', 'utf-8')
-    chinese_words_counter = 0
-    chinese_detect = 'false'
+
+    iCHINESE_WORDS_COUNTER = 0
+    bCHINESE_DETECT = 'false'
 
     for n,line in enumerate(f.read().split('\n')):
         #print n, line
         n += 1
         if re.findall(ur'[\u4e00-\u9fff]+', line):
-            chinese_detect = 'true'
-            chinese_words_counter += 1
+            bCHINESE_DETECT = 'true'
+            iCHINESE_WORDS_COUNTER += 1
             #print "line:",n,line
     f.close()
 
-    if chinese_detect.lower() in ['true']:
-        print ' + [Chinese /',chinese_words_counter,'] ', filename
+    if bCHINESE_DETECT.lower() in ['true']:
+        print ' + [Chinese /',iCHINESE_WORDS_COUNTER,'] ', filename
     else:
-        print ' + [Chinese /',chinese_words_counter,'] ', filename
-
+        print ' + [Chinese /',iCHINESE_WORDS_COUNTER,'] ', filename
 
 def scan_file(path):
     #print "Current Path: " + path
@@ -50,11 +52,10 @@ def scan_file(path):
             except:
                 continue
 
-
 def main():
   opt=argparse.ArgumentParser(description="::::: Chinese Words Scanner :::::")
-  opt.add_argument("scan_path", help="ex) /path_to_scan")
-  opt.add_argument("-p", "--path", action="store_true", dest="path", help="ex) python chinese_words_scan_v0.1.py -p /path_to_scan")
+  opt.add_argument("scan_path", help="ex) /chinese_textable_path")
+  opt.add_argument("-p", "--path", action="store_true", dest="path", help="ex) python chinese_words_scan_v0.1.py -p /chinese_textable_path")
 
   if len(sys.argv)<=2:
     opt.print_help()
@@ -69,7 +70,6 @@ def main():
   else:
       opt.print_help()
       sys.exit()
-
 
 if __name__ == '__main__':
     main()
