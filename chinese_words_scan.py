@@ -51,7 +51,7 @@ def SCAN_TEXTFILE(path):
 	            except:
 	                pass
     else:
-        print "\n[-] [ %s ] not exits.! Check directory.!! " % (path)
+        print '\n[-] [ %s ] not exits.! Check directory.!! ' % (path)
         sys.exit()
 
 def main():
